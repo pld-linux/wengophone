@@ -1,0 +1,15 @@
+--- wengophone-2.1.2-source/wengophone/res/wengophone.desktop.orig	2007-03-20 16:51:32.000000000 +0100
++++ wengophone-2.1.2-source/wengophone/res/wengophone.desktop	2007-11-08 19:30:46.000000000 +0100
+@@ -3,9 +3,10 @@
+ Name=WengoPhone
+ Comment=VOIP softphone
+ Comment[fr]=Téléphone VOIP
++Comment[pl]=Telefon VOIP
+ Exec=qtwengophone
+-Icon=wengophone
++Icon=wengophone.png
+ StartupNotify=true
+ Terminal=false
+ Type=Application
+-Categories=Qt;Network;Telephony;VideoConference
++Categories=Qt;Network;InstantMessaging;
