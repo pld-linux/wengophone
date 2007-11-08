@@ -16,9 +16,10 @@ Patch1:		%{name}-lrelease.patch
 Patch2:		%{name}-avcodec.patch
 Patch3:		%{name}-desktop.patch
 URL:		http://www.openwengo.com/
-#BuildRequires:	Qt3Support-devel
 BuildRequires:	QtCore-devel
 BuildRequires:	QtGui-devel
+BuildRequires:	QtSvg-devel
+BuildRequires:	QtXml-devel
 BuildRequires:	cmake >= 2.4.4
 BuildRequires:	qt4-build
 BuildRequires:	qt4-qmake
@@ -77,9 +78,6 @@ install ../wengophone/res/*.protocol $RPM_BUILD_ROOT%{_datadir}/services
 
 %clean
 rm -rf $RPM_BUILD_ROOT
-
-%post	-p /sbin/ldconfig
-%postun	-p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
