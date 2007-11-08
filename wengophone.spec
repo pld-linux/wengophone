@@ -16,13 +16,13 @@ Patch1:		%{name}-lrelease.patch
 Patch2:		%{name}-avcodec.patch
 Patch3:		%{name}-desktop.patch
 URL:		http://www.openwengo.com/
-BuildRequires:	QtCore-devel
-BuildRequires:	QtGui-devel
-BuildRequires:	QtSvg-devel
-BuildRequires:	QtXml-devel
+BuildRequires:	QtCore-devel >= 4.1.4
+BuildRequires:	QtGui-devel >= 4.1.4
+BuildRequires:	QtSvg-devel >= 4.1.4
+BuildRequires:	QtXml-devel >= 4.1.4
 BuildRequires:	cmake >= 2.4.4
-BuildRequires:	qt4-build
-BuildRequires:	qt4-qmake
+BuildRequires:	qt4-build >= 4.1.4
+BuildRequires:	qt4-qmake >= 4.1.4
 BuildRequires:	libosip2-devel >= 3.0.1
 BuildRequires:	curl-libs >= 7.16.1
 BuildRequires:	libsamplerate-devel >= 0.1.2
