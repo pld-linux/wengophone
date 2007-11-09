@@ -20,30 +20,30 @@ BuildRequires:	QtCore-devel >= 4.1.4
 BuildRequires:	QtGui-devel >= 4.1.4
 BuildRequires:	QtSvg-devel >= 4.1.4
 BuildRequires:	QtXml-devel >= 4.1.4
-BuildRequires:	cmake >= 2.4.4
-BuildRequires:	qt4-build >= 4.1.4
-BuildRequires:	qt4-qmake >= 4.1.4
-BuildRequires:	libosip2-devel >= 3.0.1
-BuildRequires:	curl-libs >= 7.16.1
-BuildRequires:	libsamplerate-devel >= 0.1.2
-BuildRequires:	libsndfile-devel >= 1.0.12
 BuildRequires:	alsa-lib-devel >= 1.0.11
+BuildRequires:	boost >= 1.33
+BuildRequires:	boost-program_options-devel >= 1.33
+BuildRequires:	boost-python-devel >= 1.33
+BuildRequires:	boost-regex-devel >= 1.33
+BuildRequires:	boost-signals-devel >= 1.33
+BuildRequires:	boost-test-devel >= 1.33
+BuildRequires:	boost-thread-devel >= 1.33
+BuildRequires:	cmake >= 2.4.4
+BuildRequires:	curl-libs >= 7.16.1
 BuildRequires:	ffmpeg-devel
-BuildRequires:	libxml2-devel >= 2.6.24
-BuildRequires:	openssl-devel >= 0.9.8a
 BuildRequires:	glib2-devel >= 2.10.3
 BuildRequires:	gnutls-devel >= 1.2.9
-BuildRequires:	speex-devel >= 1.1.12
-BuildRequires:	portaudio-devel >= 19
-BuildRequires:	boost >= 1.33
-BuildRequires:	boost-thread-devel >= 1.33
-BuildRequires:	boost-signals-devel >= 1.33
-BuildRequires:	boost-program_options-devel >= 1.33
-BuildRequires:	boost-regex-devel >= 1.33
-BuildRequires:	boost-test-devel >= 1.33
-BuildRequires:	boost-python-devel >= 1.33
+BuildRequires:	libosip2-devel >= 3.0.1
+BuildRequires:	libsamplerate-devel >= 0.1.2
+BuildRequires:	libsndfile-devel >= 1.0.12
 BuildRequires:	libuuid-devel
+BuildRequires:	libxml2-devel >= 2.6.24
+BuildRequires:	openssl-devel >= 0.9.8a
+BuildRequires:	portaudio-devel >= 19
+BuildRequires:	qt4-build >= 4.1.4
+BuildRequires:	qt4-qmake >= 4.1.4
 BuildRequires:	rpmbuild(macros) >= 1.293
+BuildRequires:	speex-devel >= 1.1.12
 BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
