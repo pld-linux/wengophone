@@ -11,9 +11,8 @@ Group:		X11/Applications
 Source0:	http://download.wengo.com/nightlybuilds/universal/sources/openwengo/%{version}/%{name}-%{version}-source.zip
 # Source0-md5:	5c079f8e0b0bcf7e951c1350c0739520
 Patch0:		%{name}-qt4tools.patch
-Patch1:		%{name}-lrelease.patch
-Patch2:		%{name}-avcodec.patch
-Patch3:		%{name}-desktop.patch
+Patch1:		%{name}-avcodec.patch
+Patch2:		%{name}-desktop.patch
 URL:		http://www.openwengo.com/
 BuildRequires:	QtGui-devel >= 4.1.4
 BuildRequires:	QtSvg-devel >= 4.1.4
@@ -38,6 +37,7 @@ BuildRequires:	libxml2-devel >= 2.6.24
 BuildRequires:	openssl-devel >= 0.9.8a
 BuildRequires:	portaudio-devel >= 19
 BuildRequires:	qt4-build >= 4.1.4
+BuildRequires:	qt4-linguist >= 4.1.4
 BuildRequires:	qt4-qmake >= 4.1.4
 BuildRequires:	rpmbuild(macros) >= 1.293
 BuildRequires:	speex-devel >= 1.1.12
@@ -58,12 +58,15 @@ such as Skype and others.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
-%patch3 -p1
 
 %build
 cd build
 %cmake \
 	-DCMAKE_BUILD_TYPE="Release" \
+	-DQT_LRELEASE_EXECUTABLE=%{_libdir}/qt4/bin/lrelease \
+%if "%{_lib}" == "lib64"
+	-DLIB_SUFFIX=64 \
+%endif
 	..
 %{__make}
 
