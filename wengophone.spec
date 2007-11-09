@@ -15,12 +15,10 @@ Patch1:		%{name}-lrelease.patch
 Patch2:		%{name}-avcodec.patch
 Patch3:		%{name}-desktop.patch
 URL:		http://www.openwengo.com/
-BuildRequires:	QtCore-devel >= 4.1.4
 BuildRequires:	QtGui-devel >= 4.1.4
 BuildRequires:	QtSvg-devel >= 4.1.4
-BuildRequires:	QtXml-devel >= 4.1.4
+BuildRequires:	QtUiTools-devel >= 4.1.4
 BuildRequires:	alsa-lib-devel >= 1.0.11
-BuildRequires:	boost >= 1.33
 BuildRequires:	boost-program_options-devel >= 1.33
 BuildRequires:	boost-python-devel >= 1.33
 BuildRequires:	boost-regex-devel >= 1.33
@@ -60,6 +58,7 @@ such as Skype and others.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 cd build
