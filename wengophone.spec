@@ -1,9 +1,8 @@
 #
 # TODO:
 # - why cmake doesn't see our OSIP2 - owfiles/FindOSIP2.cmake not executed
-# - update desc.
-Summary:	WengoPhone
-Summary(pl.UTF-8):	WengoPhone
+# - add pl summary and desc
+Summary:	WengoPhone is a free software SIP compliant VoIP client developed by the OpenWengo community
 Name:		wengophone
 Version:	2.1.2
 Release:	0.5
@@ -48,9 +47,13 @@ BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-WengoPhone.
-
-#% description -l pl.UTF-8
+WengoPhone is a free software SIP compliant VoIP client developed by
+the OpenWengo community. It allows users to speak to other users of
+SIP compliant VoIP software at no cost. It also allows users to call
+landlines, cellphones, send SMS and make video calls. None of these
+functionalities are tied to a particular SIP provider and can be used
+with any provider available on the market, unlike proprietary software
+such as Skype and others.
 
 %prep
 %setup -q -n %{name}-%{version}-source
