@@ -5,14 +5,13 @@
 Summary:	WengoPhone is a free software SIP compliant VoIP client developed by the OpenWengo community
 Name:		wengophone
 Version:	2.1.2
-Release:	0.5
+Release:	0.6
 License:	GPL
 Group:		X11/Applications
 Source0:	http://download.wengo.com/nightlybuilds/universal/sources/openwengo/%{version}/%{name}-%{version}-source.zip
 # Source0-md5:	5c079f8e0b0bcf7e951c1350c0739520
-Patch0:		%{name}-qt4tools.patch
-Patch1:		%{name}-avcodec.patch
-Patch2:		%{name}-desktop.patch
+Patch0:		%{name}-avcodec.patch
+Patch1:		%{name}-desktop.patch
 URL:		http://www.openwengo.com/
 BuildRequires:	QtGui-devel >= 4.1.4
 BuildRequires:	QtSvg-devel >= 4.1.4
@@ -57,13 +56,16 @@ such as Skype and others.
 %setup -q -n %{name}-%{version}-source
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
 
 %build
 cd build
 %cmake \
 	-DCMAKE_BUILD_TYPE="Release" \
+	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
 	-DQT_LRELEASE_EXECUTABLE=%{_libdir}/qt4/bin/lrelease \
+	-DQT_MOC_EXECUTABLE=%{_bindir}/qt4-moc \
+	-DQT_UIC_EXECUTABLE=%{_bindir}/qt4-uic \
+	-DQT_QMAKE_EXECUTABLE=%{_bindir}/qt4-qmake \
 %if "%{_lib}" == "lib64"
 	-DLIB_SUFFIX=64 \
 %endif
