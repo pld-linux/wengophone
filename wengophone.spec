@@ -5,7 +5,7 @@
 Summary:	WengoPhone is a free software SIP compliant VoIP client developed by the OpenWengo community
 Name:		wengophone
 Version:	2.1.2
-Release:	0.6
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://download.wengo.com/nightlybuilds/universal/sources/openwengo/%{version}/%{name}-%{version}-source.zip
