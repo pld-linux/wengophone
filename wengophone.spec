@@ -1,6 +1,11 @@
 #
 # TODO:
 # - why cmake doesn't see our OSIP2 - owfiles/FindOSIP2.cmake not executed
+# - doesn't build on ppc:
+#   Linking CXX executable qtwengophone
+#   /home/users/builder/rpm/BUILD/wengophone-2.1.2-source/build/libs/3rdparty/coredumper/libcoredumper.so: undefined reference to `GetAllProcessThreads'
+#   collect2: ld returned 1 exit status
+#   make[2]: *** [wengophone/src/presentation/qt/qtwengophone] Error 1
 # - add pl summary and desc
 Summary:	WengoPhone is a free software SIP compliant VoIP client developed by the OpenWengo community
 Name:		wengophone
