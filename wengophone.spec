@@ -40,9 +40,9 @@ BuildRequires:	libuuid-devel
 BuildRequires:	libxml2-devel >= 2.6.24
 BuildRequires:	openssl-devel >= 0.9.8a
 BuildRequires:	portaudio-devel >= 19
-BuildRequires:	qt4-build >= 4.1.4
-BuildRequires:	qt4-linguist >= 4.1.4
-BuildRequires:	qt4-qmake >= 4.1.4
+BuildRequires:	qt4-build >= 4.3.3-3
+BuildRequires:	qt4-linguist >= 4.3.3-3
+BuildRequires:	qt4-qmake >= 4.3.3-3
 BuildRequires:	rpmbuild(macros) >= 1.293
 BuildRequires:	speex-devel >= 1.1.12
 BuildRequires:	unzip
@@ -67,10 +67,10 @@ cd build
 %cmake \
 	-DCMAKE_BUILD_TYPE="Release" \
 	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
-	-DQT_LRELEASE_EXECUTABLE=%{_libdir}/qt4/bin/lrelease \
-	-DQT_MOC_EXECUTABLE=%{_bindir}/qt4-moc \
-	-DQT_UIC_EXECUTABLE=%{_bindir}/qt4-uic \
-	-DQT_QMAKE_EXECUTABLE=%{_bindir}/qt4-qmake \
+	-DQT_LRELEASE_EXECUTABLE=%{_bindir}/lrelease-qt4 \
+	-DQT_MOC_EXECUTABLE=%{_bindir}/moc-qt4 \
+	-DQT_UIC_EXECUTABLE=%{_bindir}/uic-qt4 \
+	-DQT_QMAKE_EXECUTABLE=%{_bindir}/qmake-qt4 \
 %if "%{_lib}" == "lib64"
 	-DLIB_SUFFIX=64 \
 %endif
