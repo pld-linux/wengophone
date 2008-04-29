@@ -22,12 +22,8 @@ BuildRequires:	QtGui-devel >= 4.1.4
 BuildRequires:	QtSvg-devel >= 4.1.4
 BuildRequires:	QtUiTools-devel >= 4.1.4
 BuildRequires:	alsa-lib-devel >= 1.0.11
-BuildRequires:	boost-program_options-devel >= 1.33
-BuildRequires:	boost-python-devel >= 1.33
-BuildRequires:	boost-regex-devel >= 1.33
-BuildRequires:	boost-signals-devel >= 1.33
-BuildRequires:	boost-test-devel >= 1.33
-BuildRequires:	boost-thread-devel >= 1.33
+BuildRequires:	boost-devel >= 1.35.0
+BuildRequires:	boost-python-devel
 BuildRequires:	cmake >= 2.4.4
 BuildRequires:	curl-libs >= 7.16.1
 BuildRequires:	ffmpeg-devel
