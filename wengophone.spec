@@ -7,10 +7,17 @@
 #   collect2: ld returned 1 exit status
 #   make[2]: *** [wengophone/src/presentation/qt/qtwengophone] Error 1
 # - add pl summary and desc
+# - doesn't build with boost-1.35.0 (libs/owutil/thread/RecursiveMutex.h):
+#	boost::detail::thread::lock_ops has been removed.
+#	Code that relies on the lock_ops implementation detail
+#	will no longer work, as this has been removed, as it is no longer
+#	necessary now that mutex types now have public lock()
+#	and unlock()  member functions. (http://www.boost.org/users/news/version_1_35_0)
+#
 Summary:	WengoPhone is a free software SIP compliant VoIP client developed by the OpenWengo community
 Name:		wengophone
 Version:	2.1.2
-Release:	1
+Release:	1.1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://download.wengo.com/nightlybuilds/universal/sources/openwengo/%{version}/%{name}-%{version}-source.zip
