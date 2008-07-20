@@ -14,7 +14,8 @@
 #	necessary now that mutex types now have public lock()
 #	and unlock()  member functions. (http://www.boost.org/users/news/version_1_35_0)
 #
-Summary:	WengoPhone is a free software SIP compliant VoIP client developed by the OpenWengo community
+Summary:	Free software SIP compliant VoIP client developed by the OpenWengo community
+Summary(pl.UTF-8):	Wolnodostępny klient VoIP zgodny z SIP tworzony przez społeczność OpenWengo
 Name:		wengophone
 Version:	2.1.2
 Release:	1.1
@@ -60,6 +61,16 @@ functionalities are tied to a particular SIP provider and can be used
 with any provider available on the market, unlike proprietary software
 such as Skype and others.
 
+%description -l pl.UTF-8
+WengoPhone to wolnodostępny, programowy klient VoIP zgodny z SIP
+rozwijany przez społeczność OpenWengo. Pozwala użytkownikom bezpłatnie
+rozmawiać z innymi użytkownikami oprogramowania VoIP zgodnego z SIP, a
+także dzwonić na linie naziemne i telefony komórkowe, wysyłać SMS-y i
+nawiązywać połączenia wideo. Żadna z tych funkcji nie jest przywiązana
+do określonego dostawcy SIP; wszystkie mogą być wykorzystywane u
+dowolnego dostawcy na rynku, w przeciwieństwie do programów
+własnościowych, takich jak Skype czy inne.
+
 %prep
 %setup -q -n %{name}-%{version}-source
 %patch0 -p1
@@ -82,14 +93,12 @@ cd build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir},%{_desktopdir},%{_pixmapsdir},%{_datadir}/%{name},%{_datadir}/services}
 
-cd build
-%{__make} install \
+%{__make} -C build install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install ../wengophone/res/*.protocol $RPM_BUILD_ROOT%{_datadir}/services
+install wengophone/res/*.protocol $RPM_BUILD_ROOT%{_datadir}/services
 
 %clean
 rm -rf $RPM_BUILD_ROOT
