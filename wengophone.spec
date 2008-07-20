@@ -19,7 +19,7 @@ Summary(pl.UTF-8):	Wolnodostępny klient VoIP zgodny z SIP tworzony przez społe
 Name:		wengophone
 Version:	2.1.2
 Release:	1.1
-License:	GPL
+License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://download.wengo.com/nightlybuilds/universal/sources/openwengo/%{version}/%{name}-%{version}-source.zip
 # Source0-md5:	5c079f8e0b0bcf7e951c1350c0739520
@@ -105,7 +105,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc INSTALL.txt wengophone/COPYING
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_datadir}/%{name}
 %attr(755,root,root) %{_libdir}/%{name}
