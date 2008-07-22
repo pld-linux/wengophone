@@ -33,7 +33,7 @@ BuildRequires:	alsa-lib-devel >= 1.0.11
 BuildRequires:	boost-devel >= 1.35.0
 BuildRequires:	boost-python-devel
 BuildRequires:	cmake >= 2.4.4
-BuildRequires:	curl-libs >= 7.16.1
+BuildRequires:	curl-devel >= 7.16.1
 BuildRequires:	ffmpeg-devel
 BuildRequires:	glib2-devel >= 2.10.3
 BuildRequires:	gnutls-devel >= 1.2.9
@@ -43,6 +43,7 @@ BuildRequires:	libsndfile-devel >= 1.0.12
 BuildRequires:	libuuid-devel
 BuildRequires:	libxml2-devel >= 2.6.24
 BuildRequires:	openssl-devel >= 0.9.8a
+BuildRequires:	pkgconfig
 BuildRequires:	portaudio-devel >= 19
 BuildRequires:	qt4-build >= 4.3.3-3
 BuildRequires:	qt4-linguist >= 4.3.3-3
